@@ -1,54 +1,14 @@
 \documentclass{ffslides}
-\ffpage{30}{1.777}
+\ffpage{25}{1.777}
 \usepackage[nolineno,norules]{lgrind}
 \begin{document}
 \normalpage{Specification}{%
-This API outputs a person’s Body Mass Index after they enter their height and weight. It also tells them whether they are underweight or overweight and about potential risks they could face. Depending on the output, the GUI will output a helpful infographic with exercise and diet tips.
+This GUI uses a BMI Calculator API to output a person's Body Mass Index after 
+they enter their height and weight. \url{https://market.mashape.com/nviror/bmi-calculator}
+It also tells them whether they are underweight or overweight and what potential health risks they could face.
+Depending on their BMI, the GUI will output a helpful infographic with exercise and diet tips.
 }
-\normalpage{Analysis}{%
-We will use the mashape marketplace to query for a gif matching the keyword.
-\url{https://market.mashape.com/giphy/giphy} The information is returned
-in json format. Initially, we were going to use this API to parse it: \url{https://github.com/nlohmann/json}. Unforutnately,
-our json was not working so we used a c string to parse through the information instead.
-Once we find the url from that info, we cas use the CURL API to retrieve the gif.
-\url{https://curl.haxx.de}
-}
-\normalpage{Design}{%
-\qi{main}
-\qii{Use the functions below to test retrieving and displaying the gif first to the console,
-then within the FLTK GUI}
-\qi{makeSearchWindow}
-\qii{GUI that allows users to input a keyword}
-\qi{makeDisplayWindow}
-\qii{Window that display the gif}
-\qi{searchGiphy}
-\qii{Get user's keyword and search mashape for an appropriate gif}
-\qi{getGifInfo}
-\qii{Get the url of gif from mashape info}
-\qi{cbDisplay}
-\qii{Runs the gif within the DisplayWindow}
-\qi{stopAnimation}
-\qii{Query the running processes and stop the animation so we do not allow
-more than one to be displaying at once}
-\qi{lab.h}
-\qii{List of FLTK functions and declarations}
-
-}
-\input mainDoc
-\input makeSearchWindowDoc
-\input makeDisplayWindowDoc
-\input searchGiphyDoc
-\input getGifInfoDoc
-\input cbDisplayDoc
-\input stopAnimationDoc
-\input labheaderDoc
-\normalpage{Test}{%
-When we input a keyword into the GUI, a gif related to the keyword should pop up.
-}
-\ctext{.1}{.2}{.6}{%
-My code works like 15 percent of the time. The gif is found and downloaded, but it is not displayed.
-Sometime it is displayed, sometime it is not. The gif is not animated.
-}
-\putfig{.7}{.1}{.22}{bird}
+\putfig{.2}{.45}{.6}{BMIAPI}
+\ctext{.6}{.01}{.35}{%
+CS102 Final Project: Riddhima Mathur, Pratyush Panda, William Phyo, Anna Shao}
 \end{document}
-0
