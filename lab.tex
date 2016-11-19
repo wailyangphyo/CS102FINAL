@@ -3,12 +3,27 @@
 \usepackage[nolineno,norules]{lgrind}
 \begin{document}
 \normalpage{Specification}{%
-This GUI uses a BMI Calculator API to output a person's Body Mass Index after 
-they enter their height and weight. \url{https://market.mashape.com/nviror/bmi-calculator}
-It also tells them whether they are underweight or overweight and what potential health risks they could face.
-Depending on their BMI, the GUI will output a helpful infographic with exercise and diet tips.
+This GUI uses an API to calculate a person’s Body Mass Index after they 
+enter their height and weight. It also tells them whether they are 
+underweight or overweight and about potential risks they could face. 
+Depending on the output, the GUI will open a window that shows celebrities 
+who are in the same BMI range as the user and helpful health tips.
 }
 \putfig{.2}{.45}{.6}{BMIAPI}
 \ctext{.6}{.01}{.35}{%
 CS102 Final Project: Riddhima Mathur, Pratyush Panda, William Phyo, Anna Shao}
+\normalpage{Analysis}{%
+We will use the mashape marketplace to acquire an API that calculates the user's BMI. 
+(https://market.mashape.com/nviror/bmi-calculator) 
+Users input their measurements in the appropriate search box (pounds 
+for weight and inches for height). The information is returned in json 
+format. We are going to use this API to parse it: https://github.com/nlohmann/json. 
+Once we find the url from that info, we can use the CURL API to retrieve the user’s BMI. 
+https://curl.haxx.de. The BMI will be displayed on a new window with two buttons, {\bf Health Tips} 
+and {\bf Celebs with Similar BMIs}. The first option will open a window with 
+a helpful infographic. The second will open a new window with celebrities who 
+are in the same BMI range as the user. 
+}
+\putfig{.11}{.5}{.33}{design1}
+\putfig{.55}{.5}{.25}{design2}
 \end{document}
