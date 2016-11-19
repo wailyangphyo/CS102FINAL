@@ -1,0 +1,12 @@
+#include "lab.h"
+Fl_Cairo_Window * dw;
+Fl_Cairo_Window* makeDisplayWindow(int width, int height)
+{
+  dw = new Fl_Cairo_Window(width,height);
+  dw->label("Celebrities like You");
+  dw->color(FL_WHITE);
+  gb = new Fl_Box(0,0,width,height);
+  gb->image(new );
+  gb->color(FL_CYAN);
+  return dw;
+}
