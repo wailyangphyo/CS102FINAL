@@ -1,0 +1,25 @@
+#include "lab.h"
+#include "json.hpp"
+using nlohmann::json;
+GifInfo getGifInfo(std::string s)
+{
+    std::string g = searchGiphy(s);
+    while(g.back()!='}') g.pop_back();
+    auto j = json::parse(g);
+    GifInfo gi;
+    std::string info;
+    for(auto &e : j["data"])
+    {
+	info += e["images"]["original"]["url"]; info += " ";
+	info += e["images"]["original"]["width"]; info += " ";
+	info += e["images"]["original"]["height"]; info += " ";
+	info += e["images"]["original"]["frames"];
+    }
+    std::istringstream iss(info);
+    iss >> gi.url;
+    iss >> gi.width;
+    iss >> gi.height;
+    iss >> gi.frames;
+    return gi;
+    
+}
