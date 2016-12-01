@@ -27,4 +27,12 @@ extern Fl_Box* gb;
 extern Fl_Cairo_Window * dw;
 extern Fl_Input * wi;
 extern Fl_Input * hi;
-
+extern Fl_Box* ii;
+std::string searchAPI(std::string wi,std::string hi);
+struct BMIinfo
+{
+    std::string value;
+    std::string status;
+    std::string risk;
+};
+extern BMIinfo b;
