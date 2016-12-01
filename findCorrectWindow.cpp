@@ -7,17 +7,17 @@ std::string findCorrectWindow(Fl_button*, void*)
     
     //how to call function??
     if (b.status == "Underweight"){
-	makeUnderweightWindow()->show();
+	cbUnderWindow()->show();
     } else if (b.status == "Normal (healthy weight)"){
-	makeHealthyWindow()->show();
+	cbHealthyWindow()->show();
     } else if (b.status == "Overweight"){
-	makeOverweightWindow()->show();
+	cbOverWindow()->show();
     } else if (b.status == "Obese Class I (Moderately obese)"){
-	makeObese1Window()->show();
+	cbObese1Window()->show();
     } else if (b.status == "Obese Class II (Severely obese)"){
-	makeObese2Window()->show();
+	cbObese2Window()->show();
     } else if (b.status == "Obese Class III (Very severely obese)"){
-	makeObese3Window()->show();
+	cbObese3Window()->show();
     } 
 	
 }
