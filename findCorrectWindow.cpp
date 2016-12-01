@@ -2,7 +2,7 @@
 
 std::string findCorrectWindow(Fl_button*, void*)
 {
-    std::cout<< wi->value() << hi->value() << endl' 
+    std::cout<< wi->value() << hi->value() << std::endl; 
     searchAPI(wi,hi)
     
     //how to call function??
@@ -13,11 +13,11 @@ std::string findCorrectWindow(Fl_button*, void*)
     } else if (b.status == "Overweight"){
 	makeOverweightWindow()->show();
     } else if (b.status == "Obese Class I (Moderately obese)"){
-	makeObeseWindow()->show();
+	makeObese1Window()->show();
     } else if (b.status == "Obese Class II (Severely obese)"){
-	makeObeseWindow()->show();
+	makeObese2Window()->show();
     } else if (b.status == "Obese Class III (Very severely obese)"){
-	makeSeverelyObeseWindow()->show();
+	makeObese3Window()->show();
     } 
 	
 }
