@@ -7,6 +7,7 @@
 #include <FL/Fl_GIF_Image.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Input.H>
+#include <FL/Fl_JPG_Image.H>
 void stopAnimation ();
 struct APIInfo
 {
@@ -21,13 +22,13 @@ std::string searchAPI(std::string);
 Fl_Cairo_Window* makeYourBMIWindow();
 Fl_Cairo_Window* makeDisplayWindow();
 void cbDisplay(Fl_Button*, void*);
-const int width = 400;
-const int height = 300;
+const int width = 512;
+const int height = 600;
 extern Fl_Box* gb;
 extern Fl_Cairo_Window * dw;
-extern Fl_Input * wi;
-extern Fl_Input * hi;
-extern Fl_Box* ii;
+extern Fl_Input * wi; //input window
+extern Fl_Input * hi; //input window
+extern Fl_Box* ii; //input window
 std::string searchAPI(std::string wi,std::string hi);
 struct BMIinfo
 {
