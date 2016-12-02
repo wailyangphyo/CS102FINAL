@@ -12,17 +12,16 @@ Fl_Cairo_Window* makeInputWindow()
     
     cw->label("BMI Search");
     cw->color(FL_CYAN);
-    wi = new Fl_Input(.25*w,.5*h,.45*w,.1*h, 
-			   "Weight");
-    hi = new Fl_Input(.25*300,.70*400,.45*300,.1*400, 
-			    "Height");
-    t = new Fl_Button(.25*300,.85*400,.45*300,.1*400, 
+    wi = new Fl_Input(.33*w,.5*h,.45*w,.1*h, 
+			   "Weight in lbs");
+    hi = new Fl_Input(.33*w,.70*h,.45*w,.1*h, 
+			    "Height in in");
+    t = new Fl_Button(.33*w,.85*h,.45*w,.1*h, 
 			   "Calculate");
 //    t = new Fl_Button(.05*width,.05*height,128,128);
  //   t->image(new Fl_PNG_Image("input.png"));
     t->callback((Fl_Callback*)cbUnderWindow);
-    ii = new Fl_Box(.05*width,.05*height,128,128);
-    ii->image(new Fl_PNG_Image("input.png"));
+
     //cw->label("GIF Search");
     return cw;
 }
