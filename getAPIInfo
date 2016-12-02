@@ -1,23 +1,18 @@
 #include "lab.h"
 #include "json.hpp"
 using nlohmann::json;
-BMIinfo getAPIInfo(std::string s)
+BMIinfo getAPIInfo()
 {
-    std::string b = searchGiphy(s);
-    while(g.back()!='}') g.pop_back();
-    auto j = json::parse(b);
+    std::string s = searchAPI("150","70");
+    std::cout << "s" <<  s << std::endl;
+    while(s.back()!='}') s.pop_back();
+    auto j = json::parse(s);
     BMIinfo bi;
-    std::string info;
-    for(auto &e : j["bmi"])
-    {
-	info += e["value"]; info += " ";
-	info += e["status"]; info += " ";
-	info += e["risk"];
-    }
-    std::istringstream iss(info);
+    std::string value =  j["bmi"]["value"];
+    std::cout << value << std::endl;
+    bi.status = j["bmi"]["status"];
+    bi.risk = j["bmi"]["risk"];
+    std::istringstream iss(value);
     iss >> bi.value;
-    iss >> bi.status;
-    iss >> bi.risk;
     return bi;
-    
 }
