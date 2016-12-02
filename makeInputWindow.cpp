@@ -1,23 +1,27 @@
 #include "lab.h"
+void makeOutWindow(Fl_Button*,void*);
 Fl_Cairo_Window * cw;
-Fl_Input * hi; //height in 
-Fl_Input * wi; //weight in
-Fl_Button * b;
-Fl_Box * ii;
-Fl_Cairo_Window* makeSearchWindow()
+Fl_Input * hi;
+Fl_Input * wi;
+Fl_Button * t;
+Fl_Cairo_Window* makeInputWindow()
 {
-    cw = new Fl_Cairo_Window(width,he);
-    cw->label("BMI Calculator");
-    cw->color(FL_GREEN);
-    hi = new Fl_Input(.7*width,.25*height,.25*width,.1*height, 
-			   "Height in Inches");
-    wi = new Fl_Input(.7*width,.5*height,.25*width,.1*height, 
-			   "Weight in Pounds");
-    b = new Fl_Button(.57*width,.75*height,.25*width,.1*height, 
+    const int w = 300;
+    const int h = 400;
+    cw = new Fl_Cairo_Window(w,h);
+    
+    cw->label("BMI Search");
+    cw->color(FL_CYAN);
+    wi = new Fl_Input(.25*w,.5*h,.45*w,.1*h, 
+			   "Weight");
+    hi = new Fl_Input(.25*300,.70*400,.45*300,.1*400, 
+			    "Height");
+    t = new Fl_Button(.25*300,.85*400,.45*300,.1*400, 
 			   "Calculate");
-    //b->callback(( Fl_Callback * ) cbGetInfo);
-    //b->color(FL_WHITE);
-    ii = new Fl_Box(.05*width,.05*height,128,128);
-    ii->image(new Fl_PNG_Image("input.png"));
+//    t = new Fl_Button(.05*width,.05*height,128,128);
+ //   t->image(new Fl_PNG_Image("input.png"));
+    t->callback((Fl_Callback*)cbUnderWindow);
+
+    //cw->label("GIF Search");
     return cw;
 }
