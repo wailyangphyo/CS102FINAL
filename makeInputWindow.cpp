@@ -21,7 +21,8 @@ Fl_Cairo_Window* makeInputWindow()
 //    t = new Fl_Button(.05*width,.05*height,128,128);
  //   t->image(new Fl_PNG_Image("input.png"));
     t->callback((Fl_Callback*)cbUnderWindow);
-
+    ii = new Fl_Box(.05*width,.05*height,128,128);
+    ii->image(new Fl_PNG_Image("input.png"));
     //cw->label("GIF Search");
     return cw;
 }
