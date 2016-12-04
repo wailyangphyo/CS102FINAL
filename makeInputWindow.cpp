@@ -16,6 +16,7 @@ Fl_Cairo_Window* makeInputWindow()
 			   "Weight in lbs");
     hi = new Fl_Input(.33*w,.70*h,.45*w,.1*h, 
 			    "Height in in");
+	hi = hi*0.0254;
     t = new Fl_Button(.33*w,.85*h,.45*w,.1*h, 
 			   "Calculate");
 //    t = new Fl_Button(.05*width,.05*height,128,128);
