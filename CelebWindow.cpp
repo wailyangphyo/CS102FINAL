@@ -1,37 +1,44 @@
 #include "lab.h"
-Fl_Cairo_Window * cw;
-Fl_Box * le;
-Fl_Cairo_Window* makeUnderweightWindow(int width, int height);
+Fl_Box * cb;
+Fl_Cairo_Window * b;
+
+Fl_Cairo_Window* CelebWindow()
+
 {
-  cw = new Fl_Cairo_Window(width,height);
-  cw->label("UnderweightWindow";
-  le = new Fl_Box(0,0,width,height);
-  le->image(new
+    
+    b = new Fl_Cairo_Window(600,600);
+    b->label("Window Label"); //Change This!
+    b->color(FL_CYAN);
+    {
+   
+    cb = new Fl_Box(0,0,600,600);
+    std::string z = bmi.status;
+    std::cout << "celeb window:" << z << std::endl;
+    if (z == "Underweight"){
+	cb->image(new Fl_JPEG_Image("underweight.jpg"));
+    } 
+    else if (z == "Normal (healthy weight)"){
+	cb -> image(new Fl_JPEG_Image("healthy.jpg"));	
+    } 
+    else if (z == "Overweight"){
+
+	cb -> image(new Fl_JPEG_Image("overweight.jpg"));
+    } 
+    else if (z == "Obese Class I (Moderately obese)"){
+	cb -> image(new Fl_JPEG_Image("obese1.jpg"));
+    } 
+    
+    else if (z == "Obese Class II (Severely obese)"){
+
+	cb -> image(new Fl_JPEG_Image("obese1.jpg"));
+	
+	
+    } 
+    else if (z == "Obese Class III (Very severely obese)"){
+
+	cb -> image(new Fl_JPEG_Image("obese2.jpg"));	
+    } 
+    }
+    return b;
 }
-Fl_Cairo_Window * rm;
-Fl_Box * jp;
-Fl_Cairo_Window* makeHealthyWindow(int width, int height);
-{
-  rm = new Fl_Cairo_Window(width,height)l 
-  rm->label("HealthyWindow");
-  jp = new Fl_Box(0,0,width,height);
-  jp->image(new
-}
-Fl_Cairo_Window * sb;
-Fl_Box * rl;
-Fl_Cairo_Window* makeOverweightWindow(int width, int height);
-{
-  sb = new Fl_Cairo_Window(width,height); 
-  sb->label("OverweightWindow");
-  rl = new Fl_Box(0,0,width,height); 
-  rl->image(new
-}
-Fl_Cairo_Window * pm;
-Fl_Box * sm;
-Fl_Cairo_Window* makeUnderweightWindow(int width, int height);
-{
-  pm = new Fl_Cairo_Window(width,height);
-  pm->label("ObeseWindow");
-  sm = new Fl_Box(0,0,width,height);
-  sm->image(new
-}
+    

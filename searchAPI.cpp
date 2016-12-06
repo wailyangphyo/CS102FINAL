@@ -20,7 +20,7 @@ std::string searchAPI(std::string wi,std::string hi)
     slist1 = curl_slist_append(slist1,js.c_str());
     //slist1 = curl_slist_append(slist1,data.c_str());
     std::string q = url;
-    data = "{\"weight\":{\"value\":"+ wi +",\"unit\":\"lb\"},\"height\":{\"value\":"+ hi +",\"unit\":\"in\"},\"sex\":\"m\",\"age\":\"24\",\"waist\":\"34.00\",\"hip\":\"40.00\"}";
+    data = "{\"weight\":{\"value\":"+ wi +",\"unit\":\"lb\"},\"height\":{\"value\":"+ hi +",\"unit\":\"m\"},\"sex\":\"m\",\"age\":\"24\",\"waist\":\"34.00\",\"hip\":\"40.00\"}";
     //std::cout << "q" << q << std::endl;
     CURL* hnd = curl_easy_init();
     curl_easy_setopt(hnd,CURLOPT_URL,q.c_str());

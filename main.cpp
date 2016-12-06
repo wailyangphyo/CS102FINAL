@@ -2,7 +2,8 @@
 
 int main()
 {
-  makeInputWindow()->show();
-  
-  Fl::run();
- }
+    makeInputWindow()->show();
+    
+    
+    Fl::run();
+}
