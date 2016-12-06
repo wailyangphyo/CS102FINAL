@@ -24,6 +24,31 @@ and {\bf Celebs with Similar BMIs}. The first option will open a window with
 a helpful infographic. The second will open a new window with celebrities who 
 are in the same BMI range as the user. 
 }
+\normalpage{Design}{%
+\qi{main}
+\qii{show the BMI User's input Window}
+\qi{searchAPI}
+\qi{getAPIInfo}
+\qi{makeInputWindow}
+\qii{creates Input Window for User's search}
+\qiii{t will refer to a callback window[findCorrectWindow]}
+\qi{makeOutWindow}
+\qii{creates an output window through input and findCorrectWindow. shows BMI,Status,Risks}
+\qi{CelebWindow}
+\qii{creates a window that shows pictures of Celeberties that have similar BMI as the user}
+\qi{findCorrectWindow}
+\qii{refer to output window from input window using callback function}
+\qi{cbCeleb}
+\qii{refer to CelebWindow from output window using callback function}
+}
+\normalpage{Design}{%
+\input mainDoc
+\input mainInputWindowDoc
+\input makeOutWindowDoc
+\input CelebWindowDoc
+\input findCorrectWindowDoc
+\input CelebWindowDoc
+}
 \putfig{.11}{.5}{.33}{design1}
 \putfig{.55}{.5}{.25}{design2}
 \end{document}
